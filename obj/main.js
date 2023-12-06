@@ -6,6 +6,18 @@ const precio = document.getElementById("precio");
 const txt = document.getElementById("txt");
 const amarillo = document.getElementsByClassName("amarillo");
 const rojo = document.getElementsByClassName("rojo");
+const datos = document.getElementsByClassName("datos");
+
+console.log(productos);
+function modificar(dato) {
+    console.log(dato);
+}
+
+function eliminar(id) {
+    productos.splice(productos[id],1);
+    console.log(datos);
+
+}
 
 productos.forEach(producto => {
     const datos = document.createRange().createContextualFragment(/*html*/`
@@ -17,8 +29,8 @@ productos.forEach(producto => {
             </div>
             <h5>${producto.precio}</h5>
             <div class="acciones">
-                <input id="${"numEditar"+producto.id}" class="btn-a amarillo" type="button" value="Modificar">
-                <input id="${"numEliminar"+producto.id}" class="btn-a rojo" type="button" value="Eliminar">
+                <input id="${"numEditar"+producto.id}" onclick="modificar(${producto.id})" class="btn-a amarillo" type="button" value="Modificar">
+                <input id="${"numEliminar"+producto.id}" onclick="eliminar(${producto.id})" class="btn-a rojo" type="button" value="Eliminar">
             </div>
     </article>
     `);
@@ -45,8 +57,8 @@ function agregar() {
             </div>
             <h5>${productos[productos.length -1].precio}</h5>
             <div class="acciones">
-                <input id="${productos[productos.length -1].id}" class="btn-a amarillo" type="button" value="Modificar">
-                <input id="${productos[productos.length -1].id}" class="btn-a rojo" type="button" value="Eliminar">
+                <input id="${productos[productos.length -1].id}" onclick="modificar(${productos[productos.length -1].id})" class="btn-a amarillo" type="button" value="Modificar">
+                <input id="${productos[productos.length -1].id}" onclick="modificar(${productos[productos.length -1].id})" class="btn-a rojo" type="button" value="Eliminar">
             </div>
     </article>
     `);
