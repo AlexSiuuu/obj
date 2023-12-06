@@ -4,6 +4,8 @@ const nombre = document.getElementById("nombre");
 const img = document.getElementById("img");
 const precio = document.getElementById("precio");
 const txt = document.getElementById("txt");
+const amarillo = document.getElementsByClassName("amarillo");
+const rojo = document.getElementsByClassName("rojo");
 
 productos.forEach(producto => {
     const datos = document.createRange().createContextualFragment(/*html*/`
@@ -15,15 +17,15 @@ productos.forEach(producto => {
             </div>
             <h5>${producto.precio}</h5>
             <div class="acciones">
-                <input id="${producto.id}" class="btn-a amarillo" type="button" value="Modificar">
-                <input id="${producto.id}" class="btn-a rojo" type="button" value="Eliminar">
+                <input id="${"numEditar"+producto.id}" class="btn-a amarillo" type="button" value="Modificar">
+                <input id="${"numEliminar"+producto.id}" class="btn-a rojo" type="button" value="Eliminar">
             </div>
     </article>
     `);
     tabla.append(datos);
 });
 
-btnA.addEventListener("click", () => {
+function agregar() {
     const nombreNuevo = nombre.value;
     const imgNuevo = img.value;
     const precioNuevo = precio.value;
@@ -50,4 +52,7 @@ btnA.addEventListener("click", () => {
     `);
     tabla.append(nuevoDato);
     txt.innerHTML = "Producto agregado correctamente...";
-});
+    nombre.value = "";
+    img.value = "";
+    precio.value = "";
+}
