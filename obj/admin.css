@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav h1 {
+    width: 50%;
+    font-size: 2.5em;
+}
+
+nav ul a {
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    margin-left: 30px;
+}
+
+main {
+    margin: 20px 37%;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgb(219, 219, 219);
+    height: 40vh;
+    background-color: rgb(156, 156, 156);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.3em;
+}
+
+.input {
+    padding: 2px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 65px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 300ms;
+}
+
+.btn:hover {
+    transition: 300ms;
+    background-color: white;
+    color: black;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    width: 80%;
+    height: 8vh;
+    background-color: rgb(243, 243, 243);
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+    border: 1px solid black;
+}
+
+.datos {
+    display: flex;
+    width: 80%;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.3em;
+    border: 1px solid black;
+}
+
+.img-tabla {
+    width: 10%;
+}
+
+.img-tabla img {
+    width: 100%;
+}
+
+.acciones {
+    display: flex;
+    margin-left: -50px;
+}
+
+.btn-a {
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: .5em;
+    font-weight: 500;
+}
+
+.amarillo {
+    transition: 400ms;
+    background-color: rgb(255, 248, 122);
+}
+
+.amarillo:hover {
+    transition: 400ms;
+    cursor: pointer;
+    background-color: rgb(255, 242, 0);
+}
+
+.rojo {
+    transition: 400ms;
+    background-color: rgb(255, 128, 128);
+}
+
+.rojo:hover {
+    transition: 400ms;
+    cursor: pointer;
+    background-color: rgb(255, 55, 55);
+}

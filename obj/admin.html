@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin</title>
+</head>
+<body>
+
+    <nav>
+        <h1>Admin</h1>
+        <ul>
+            <a href="#">Inicio</a>
+            <a href="index.html">Sitio</a>
+        </ul>
+    </nav>
+
+    <marquee id="txt" behavior="" direction=""></marquee>
+
+    <main>
+        <form action="">
+            <label for="">Nombre:</label>
+            <input id="nombre" class="input" type="text" autocomplete="off">
+            <label for="">Imagen:</label>
+            <input id="img" class="input" type="text" autocomplete="off">
+            <label for="">Precio:</label>
+            <input id="precio" class="input" type="text" autocomplete="off">
+            <input id="btn-a" class="btn" type="button" value="Agregar">
+        </form>
+    </main>
+
+    <div id="tabla" class="data">
+        <article class="titulo">
+            <h4>Id</h4>
+            <h4>Nombre</h4>
+            <h4>Imagen</h4>
+            <h4>Precio</h4>
+            <h4>Acciones</h4>
+        </article>
+    </div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
