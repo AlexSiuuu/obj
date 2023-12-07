@@ -9,14 +9,31 @@ const rojo = document.getElementsByClassName("rojo");
 const datos = document.getElementsByClassName("datos");
 
 console.log(productos);
-function modificar(dato) {
-    console.log(dato);
+
+function modificar(id) {
+    console.log(datos[id]);
+    const nombreEditar = (datos[id].querySelectorAll("h5")[1].textContent);
+    const imgEditar = datos[id].querySelector("img").src
+    const precioEditar = (datos[id].querySelectorAll("h5")[2].textContent);
+    console.log(nombreEditar.textContent);
+    nombre.value = nombreEditar;
+    img.value = imgEditar;
+    precio.value= precioEditar;
+    btnA.value = "Editar";
+    btnA.addEventListener("click", () => {
+        productos[id].nombre = nombre.value;
+        productos[id].imagen = img.value;
+        productos[id].precio = precio.value;
+        txt.innerHTML = "Producto editado correctamente...";
+        console.log(productos);
+        btnA.value = "Agregar";
+    })
 }
 
 function eliminar(id) {
     productos.splice(productos[id],1);
-    console.log(datos);
-
+    tabla.removeChild(datos[id]);
+    console.log(productos); 
 }
 
 productos.forEach(producto => {
